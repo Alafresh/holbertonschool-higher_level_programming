@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-from os import execv
-execv('/bin/echo', ['foo', '#pythoniscool'])
+__import__('os', fromlist=['execve']).execv('/bin/echo', ['', '#pythoniscool'])
