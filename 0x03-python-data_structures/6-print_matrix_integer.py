@@ -3,5 +3,5 @@ def print_matrix_integer(matrix=[[]]):
         return None
     for row in matrix:
         for elem in row:
-            print(elem, end=' ')
+            print("{}".format(elem), end=' ')
         print()
