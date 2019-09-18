@@ -1,9 +1,16 @@
 #include "lists.h"
 
+/**
+* middle_list - find the middle of a linked list
+* @head: linked list
+* Return: the middle
+*/
+
 listint_t *middle_list(listint_t **head)
 {
 	listint_t *slow = (*head);
 	listint_t *fast = (*head);
+
 	while (fast && fast->next)
 	{
 		slow = slow->next;
@@ -22,9 +29,11 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *middle = middle_list(head);
 
+	if ((*head) == NULL)
+		return (1);
 	while (middle != NULL)
 	{
-		if (middle->n != (*head)->n )
+		if (middle->n != (*head)->n)
 			return (1);
 		(*head) = (*head)->next;
 		middle = middle->next;
