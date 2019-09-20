@@ -8,4 +8,4 @@ def best_score(a_dictionary):
         if a_dictionary[i] > bigger:
             bigger = a_dictionary[i]
             bigger_str = i
-            return bigger_str
+    return bigger_str
