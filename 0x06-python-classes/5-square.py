@@ -29,4 +29,4 @@ class Square:
         for i in range(self.__size):
             print()
             for j in range(self.__size):
-                print('#',end='')
+                print('{}'.format('#'), end='')
