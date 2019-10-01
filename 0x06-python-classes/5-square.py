@@ -27,6 +27,6 @@ class Square:
         if self.__size is 0:
             print()
         for i in range(self.__size):
-            print()
             for j in range(self.__size):
                 print('{}'.format('#'), end='')
+            print()
