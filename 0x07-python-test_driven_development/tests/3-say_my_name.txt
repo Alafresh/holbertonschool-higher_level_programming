@@ -1,0 +1,24 @@
+The ``say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+
+    1) argument 2 is a number
+    >>> say_my_name("Juan", 3)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    2) argument 1 is a number
+    >>> say_my_name(3, "Socrates")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    3) pass number string
+    >>> say_my_name("3", "Calle")
+    My name is 3 Calle
+

@@ -1,0 +1,22 @@
+The ``text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+    1) print simple text
+    >>> text_indentation("""Hay naranjas en la nevera? nose.""")
+    Hay naranjas en la nevera?
+    <BLANKLINE>
+    nose.
+    <BLANKLINE>
+
+    2) Try an error
+    >>> text_indentation(4)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
