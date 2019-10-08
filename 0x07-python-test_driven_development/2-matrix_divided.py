@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def matrix_divided(matrix, div):
-    if matrix is None or type(matrix[0]) != list:
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+    if (matrix == [[]] or matrix == []) or len(matrix) == 0:
+        raise TypeError('matrix must be a matrix \
+(list of lists) of integers/floats')
     elif div is 0:
         raise ZeroDivisionError('division by zero')
     elif type(div) is int:
@@ -10,7 +11,7 @@ def matrix_divided(matrix, div):
         pass
     else:
         raise TypeError('div must be a number')
-    new_matrix = [x [:] for x in matrix]
+    new_matrix = [x[:] for x in matrix]
     size = len(new_matrix[0])
     for row in new_matrix:
         count = 0
@@ -20,7 +21,8 @@ def matrix_divided(matrix, div):
             if type(colum) is int or type(colum) is float:
                 pass
             else:
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError('matrix must be a matrix \
+(list of lists) of integers/floats')
             row[count] /= div
             row[count] = round(row[count], 2)
             count += 1

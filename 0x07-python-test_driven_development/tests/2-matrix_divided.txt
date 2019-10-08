@@ -44,3 +44,17 @@ Now use it:
     Traceback (most recent call last):
     TypeError: div must be a number
 
+    7) case divide with float('int')
+    >>> matrix_divided([[1, 2, 4],[2, 5, 6]], float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+    8) missing one argument
+    >>> matrix_divided([[1, 2, 3], [6, 7, 8]])
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    9) missing two arguments
+    >>> matrix_divided()
+    Traceback (most recent call last):
+            ...
+    TypeError: matrix_divided() missing 2 required positionar arguments: 'matrix' and 'div'
