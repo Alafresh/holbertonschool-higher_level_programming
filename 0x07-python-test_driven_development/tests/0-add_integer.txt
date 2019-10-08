@@ -61,3 +61,7 @@ Now use it:
     >>> add_integer()
     Traceback (most recent call last):
     TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    13) missing one argument
+    >>> add_integer(11)
+    109
