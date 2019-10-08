@@ -20,3 +20,6 @@ Now use it:
     Traceback (most recent call last):
     TypeError: text must be a string
 
+    3) one argument
+    >>> text_indentation('                                     hay)
+    hay
