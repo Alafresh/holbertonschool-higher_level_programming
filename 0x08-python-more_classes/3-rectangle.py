@@ -40,7 +40,7 @@ class Rectangle:
         rect = ""
         count = 0
         if self.__width is 0 or self.__height is 0:
-            return rectangle
+            return rect
         for i in range(self.__height):
             for j in range(self.__width):
                 rect += "#"
