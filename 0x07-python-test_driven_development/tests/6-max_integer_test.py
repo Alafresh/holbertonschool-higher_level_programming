@@ -17,7 +17,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([50, 40, 90, 30, 15]), 90)
 
     def test_one_negative(self):
-        self.assertAlmostEqual(max_integer([-50, -40, -60, -30]), -60)
+        self.assertAlmostEqual(max_integer([-50, -40, -60, -30]), -30)
 
     def test_list_of_one(self):
         self.assertAlmostEqual(max_integer([60]), 60)
