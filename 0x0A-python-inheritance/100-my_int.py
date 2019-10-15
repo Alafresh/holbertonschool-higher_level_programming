@@ -4,7 +4,7 @@
 class MyInt(int):
 
     def __eq__(self, other):
-        super().__ne__(self)
+        return int(self) != int(other)
 
     def __ne__(self, other):
-        super().__eq__(self)
+        return int(self) == int(other)
