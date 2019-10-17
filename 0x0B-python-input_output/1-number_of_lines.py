@@ -1,5 +1,7 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 def number_of_lines(filename=""):
-    with open(filename, encoding="utf-8") as myFile:
-        number = myFile.readlines()
-    return len(number)
+    with open("my_file_0.txt") as myFile:
+        count = 0
+        for line in myFile:
+            count += 1
+    return count
