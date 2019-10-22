@@ -85,8 +85,24 @@ class Rectangle(Base):
             print('#' * self.width)
 
     def __str__(self):
+        """overrinding __str__ method"""
         name = self.__class__.__name__
         return "[{}] ({}) {}/{} - {}/{}".format(
             name, self.id,
             self.x, self.y,
             self.width, self.height)
+
+    def update(self, *args):
+        """update the attributes"""
+        if args and len(args) > 0:
+            for idx, arg in enumerate(args):
+                if idx == 0:
+                    super().__init__(arg)
+                elif idx == 1:
+                    self.width = arg
+                elif idx == 2:
+                    self.height = arg
+                elif idx == 3:
+                    self.x = arg
+                elif idx == 4:
+                    self.y = arg
