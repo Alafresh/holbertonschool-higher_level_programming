@@ -40,3 +40,9 @@ class Square(Rectangle):
         elif len(kwargs) > 0 and kwargs is not None:
             for ky, vle in kwargs.items():
                 setattr(self, ky, vle)
+
+    def to_dictionary(self):
+        dictionary = {
+                    'id': self.id, 'size': self.size,
+                    'x': self.x, 'y': self.y}
+        return dictionary
