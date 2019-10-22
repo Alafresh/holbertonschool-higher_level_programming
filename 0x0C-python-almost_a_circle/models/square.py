@@ -11,6 +11,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """overloading"""
         name = self.__class__.__name__
         return "[{}] ({}) {}/{} - {}".format(
                 name, self.id,
