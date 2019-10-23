@@ -50,3 +50,18 @@ class Base:
             instance = cls(1)
         instance.update(**dictionary)
         return instance
+
+    @classmethod
+    def load_from_file(cls):
+        """ loads the file """
+        list_i = []
+        name = cls.__name__
+        try:
+            with open("{}.json".format(name), encoding='utf-8') as file_a:
+                json_file = cls.from_json_string(file_a.read())
+                for i in json_file:
+                    creator = cls.create(**i)
+                    list_i.append(creator)
+                return list_i
+        except:
+                return []
