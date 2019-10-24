@@ -65,3 +65,30 @@ class Base:
                 return list_i
         except:
                 return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ loads the file """
+        list_i = []
+        name = cls.__name__
+        try:
+            with open("{}.csv".format(name), encoding='utf-8') as file_a:
+                json_file = cls.from_json_string(file_a.read())
+                for i in json_file:
+                    creator = cls.create(**i)
+                    list_i.append(creator)
+                return list_i
+        except:
+                return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ saves a json to a file """
+        list_o = []
+        name = cls.__name__
+        cls_name = "{}{}".format(name, ".csv")
+        if list_objs:
+            for obj in list_objs:
+                list_o.append(obj.to_dictionary())
+        with open(name, 'w', encoding='utf-8') as jsonF:
+            jsonF.write(cls.to_json_string(list_o))
