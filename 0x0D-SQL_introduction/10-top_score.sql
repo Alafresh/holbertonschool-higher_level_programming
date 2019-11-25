@@ -1,4 +1,2 @@
 -- comment
-SELECT score, name
-FROM second_table
-ORDER BY score ASC, name ASC;
+SELECT * FROM second_table ORDER BY score ASC;
