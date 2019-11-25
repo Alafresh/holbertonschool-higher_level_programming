@@ -1,2 +1,2 @@
--- displays the all tables
-show tables;
+-- displays the all tablSHOW
+SHOW TABLES;
