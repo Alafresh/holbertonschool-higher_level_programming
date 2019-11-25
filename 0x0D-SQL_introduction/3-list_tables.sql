@@ -1,2 +1,2 @@
 -- displays the all tables
-SELECT * FROM hbtn_0c_0
+SELECT table_name FROM hbtn_0c_0;
