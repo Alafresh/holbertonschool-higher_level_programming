@@ -1,2 +1,2 @@
 -- describe is not allowed I need the full description
-SHOW TABLES;
+show first_table;
