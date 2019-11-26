@@ -1,2 +1,2 @@
 -- States tables
-SELECT name FROM cities WHERE state_id = 1;
+SELECT name, id FROM cities WHERE state_id = 1 ORDER BY id ASC;
