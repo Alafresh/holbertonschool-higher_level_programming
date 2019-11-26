@@ -1,2 +1,2 @@
 -- show all privileges
-SHOW GRANTS username;
+SHOW GRANTS FOR username;
