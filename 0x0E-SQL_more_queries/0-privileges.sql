@@ -1,2 +1,2 @@
 -- show all privileges
-SHOW GRANTS FOR USERS;
+SHOW GRANTS FOR USER;
