@@ -4,6 +4,8 @@ from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import Session
 from sys import argv
+from model_city import City
+from model_state import Base, State
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
@@ -15,8 +17,8 @@ if __name__ == "__main__":
         .filter(City.state_id == State.id)\
         .order_by(City.id).all()
 
-    for city, state in new_table:
-        print('{}: ({}) {}'.format(state.name,
-                                   city.id,
-                                   city.name))
+    for i, j in new_table:
+        print('{}: ({}) {}'.format(j.name,
+                                   i.id,
+                                   i.name))
     ses.close()
