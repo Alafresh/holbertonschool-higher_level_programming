@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 # This script finds a peak in a list of integers
+
+
 def find_peak(list_of_integers):
     if len(list_of_integers) == 0:
         return None
-    n = len(list_of_integers)
     low = 0
     high = len(list_of_integers) - 1
     while low < high:
@@ -12,4 +13,4 @@ def find_peak(list_of_integers):
             high = mid
         else:
             low = mid + 1
-    return low
+    return list_of_integers[low]
