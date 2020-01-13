@@ -5,8 +5,8 @@ if __name__ == "__main__":
     try:
         url = argv[1]
         with request.urlopen(url) as response:
-            ida = response.code
-            print(ida)
+            ida = response.read()
+            print(ida.decode('UTF-8'))
     except error.HTTPError as e:
         if e.code == 401:
             print('Error code: {}'.format(e.code))
