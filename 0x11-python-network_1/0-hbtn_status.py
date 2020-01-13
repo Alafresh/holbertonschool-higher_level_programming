@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" this is a comment"""
 if __name__ == "__main__":
     from urllib import request
     with request.urlopen('https://intranet.hbtn.io/status') as response:
