@@ -2,18 +2,7 @@
 
 const url = process.argv[2];
 const request = require('request');
-const tasks = {
-  1: 0,
-  2: 0,
-  3: 0,
-  4: 0,
-  5: 0,
-  6: 0,
-  7: 0,
-  8: 0,
-  9: 0,
-  10: 0
-};
+const tasks = {};
 request(url, function (err, response, body) {
   if (err) {
     console.log(err);
@@ -21,7 +10,11 @@ request(url, function (err, response, body) {
     const list = JSON.parse(body);
     for (let i = 0; i < list.length; i++) {
       if (list[i].completed === true) {
-        tasks[list[i].userId] += 1;
+        if (tasks[list[i].userId] === undefined) {
+          tasks[list[i].userId] = 1;
+        } else {
+          tasks[list[i].userId] += 1;
+        }
       }
     }
     console.log(tasks);
