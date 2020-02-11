@@ -4,8 +4,8 @@ const request = require('request');
 
 request(url, function (err, response) {
   if (err) {
-    console.log(err);
+    console.log('code: ' + err);
   } else {
-    console.log(response.statusCode);
+    console.log('code: ' + response.statusCode);
   }
 });
