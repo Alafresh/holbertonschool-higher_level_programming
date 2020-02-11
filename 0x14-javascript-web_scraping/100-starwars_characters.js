@@ -17,9 +17,5 @@ request(url, function (err, response, body) {
         console.log(JSON.parse(body).name);
       });
     });
-    /* other way to print the names
-      for (let i = 0; i < list.length; i++) {
-        request(list[i], function (err, response, body) {
-      });*/
   }
 });
